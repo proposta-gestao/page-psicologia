@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- ========================================
+         META TAGS E CONFIGURAÇÕES BÁSICAS
+         ======================================== -->
+    
+    <!-- Meta tags básicas para configuração da página -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuração para responsividade mobile -->
+    <title>@linkpsicologia - Proposta Interativa</title> <!-- Título da página exibido na aba do navegador -->
+    
+    <!-- ========================================
+         IMPORTAÇÃO DE ESTILOS E FONTES
+         ======================================== -->
+    
+    <!-- Importação dos estilos CSS personalizados -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Fonte Google Fonts - Inter para tipografia moderna e legível -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para ícones - Versão 6.4.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Font Awesome adicional - Versão 6.5.0 para garantir compatibilidade com ícones mais recentes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-yU7mHn0+9TVcRQZJK3kXmWGHYdYmQ8X6G0XxKv9kNiyuLlRbeD7TeMCKkS28EzhtUsx0fp2/c3PtK+6mJw5ewA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+  />
+
+    <!-- Script JavaScript para funcionalidades interativas - Carregado no head para garantir disponibilidade -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- ========================================
+         HEADER E NAVEGAÇÃO PRINCIPAL
+         ======================================== -->
+    
+    <!-- Header fixo no topo da página com navegação principal -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <!-- Logo/marca da @linkpsicologia - Link clicável para o topo da página -->
+                <a href="#apresentacao" class="nav-logo">
+                    <i class="fas fa-brain"></i> <!-- Ícone de cérebro representando psicologia -->
+                    <span>@linkpsicologia</span> <!-- Nome da marca -->
+                </a>
+                
+                <!-- Menu de navegação principal - Links para seções da página -->
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#apresentacao" class="nav-link">Apresentação</a></li>
+                    <li><a href="#concorrentes" class="nav-link">Análise</a></li>
+                    <li><a href="#estrategia" class="nav-link">Estratégia</a></li>
+                    <li><a href="#grafico-projecao" class="nav-link">Projeções</a></li>
+                    <li><a href="#roi-metricas" class="nav-link">ROI</a></li>
+                    <li><a href="#cronograma" class="nav-link">Cronograma</a></li>
+                    <li><a href="#proposta" class="nav-link">Proposta</a></li>
+                    <li><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+                
+                <!-- Botão hambúrguer para menu mobile - Três barras horizontais -->
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========================================
+         SEÇÃO HERO - BANNER PRINCIPAL
+         ======================================== -->
+    
+    <!-- Seção Hero - Banner principal com título, subtítulo e estatísticas em destaque -->
+    <section id="apresentacao" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <!-- Título principal da proposta - Destaque visual da página -->
+                <h1 class="hero-title">Proposta Interativa para @linkpsicologia</h1>
+                <!-- Subtítulo explicativo sobre o posicionamento da marca -->
+                <p class="hero-subtitle">Uma referência em psicologia infantil e atendimento a crianças com autismo em Belo Horizonte</p>
+                
+                <!-- Estatísticas em destaque - Números importantes para credibilidade -->
+                <div class="hero-stats">
+                    <!-- Estatística 1: Anos de experiência -->
+                    <div class="stat">
+                        <span class="stat-number" data-target="17">17</span>
+                        <span class="stat-label">Anos de Experiência</span>
+                    </div>
+                    <!-- Estatística 2: Orçamento para Meta Ads -->
+                    <div class="stat">
+                        <span class="stat-number" data-target="800" data-prefix="R$ ">R$ 800</span>
+                        <span class="stat-label">Orçamento Meta Ads</span>
+                    </div>
+                    <!-- Estatística 3: Alcance estimado -->
+                    <div class="stat">
+                        <span class="stat-number" data-target="40000">40</span>
+                        <span class="stat-label">Alcance Estimado</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SEÇÃO DE APRESENTAÇÃO
+         ======================================== -->
+    
+    <!-- Seção de Apresentação - Contexto e informações sobre a @linkpsicologia -->
+    <section class="section">
+        <div class="container">
+            <div class="content-card">
+                <h2 class="section-title">Apresentação da @linkpsicologia e Contexto do Mercado</h2>
+                
+                <!-- Grid com 3 cards informativos sobre a essência da marca -->
+                <div class="content-grid">
+                    <!-- Card 1: Nossa Essência - Apresentação da marca e histórico -->
+                    <div class="content-item">
+                        <i class="fas fa-heart icon"></i> <!-- Ícone de coração representando cuidado -->
+                        <h3>Nossa Essência</h3>
+                        <p>Bem-vinda à proposta interativa desenvolvida para a @linkpsicologia, uma referência em psicologia infantil e atendimento a crianças com autismo em Belo Horizonte. Com 17 anos de experiência, a psicóloga Natália e sua equipe têm construído um legado de cuidado, desenvolvimento e inclusão.</p>
+                    </div>
+                    
+                    <!-- Card 2: Objetivo Principal - Meta de crescimento e expansão -->
+                    <div class="content-item">
+                        <i class="fa-solid fa-bullseye icon"></i> <!-- Ícone de alvo representando objetivo -->
+                        <h3>Objetivo Principal</h3>
+                        <p>O objetivo principal é aumentar o número de pacientes e terapeutas, expandindo o impacto da @linkpsicologia na comunidade. Para isso, é fundamental otimizar a presença online, qualificando leads e estabelecendo um fluxo contínuo de aquisição.</p>
+                    </div>
+                    
+                    <!-- Card 3: Tom de Comunicação - Diretrizes para a linguagem da marca -->
+                    <div class="content-item">
+                        <i class="fas fa-comments icon"></i> <!-- Ícone de comentários representando comunicação -->
+                        <h3>Tom de Comunicação</h3>
+                        <p>Com base na sua essência, a comunicação da @linkpsicologia será sempre acolhedora e instrutiva. Buscamos transmitir movimento, crescimento e clareza sobre os serviços oferecidos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SEÇÃO DE ANÁLISE DE CONCORRENTES
+         ======================================== -->
+    
+    <!-- Seção de Análise de Concorrentes - Menu sanfonado (accordion) para organizar informações -->
+    <section id="concorrentes" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Análise de Concorrentes</h2>
+            <p class="section-subtitle">Análise detalhada dos principais concorrentes da @linkpsicologia em Belo Horizonte</p>
+            
+            <!-- Container do accordion com 5 concorrentes principais -->
+            <div class="accordion">
+                <!-- Item 1: Clínica Bambolê -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <h3>Clínica Bambolê</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="competitor-analysis">
+                            <div class="analysis-section">
+                                <h4><i class="fas fa-thumbs-up"></i> Pontos Fortes</h4>
+                                <ul>
+                                    <li>Design clean e responsivo</li>
+                                    <li>Informações claras sobre serviços multidisciplinares</li>
+                                    <li>Seção "Nossa História" humanizada</li>
+                                    <li>Botão de WhatsApp visível</li>
+                                </ul>
+                            </div>
+                            <div class="analysis-section">
+                                <h4><i class="fas fa-thumbs-down red"></i> Pontos Fracos</h4>
+                                <ul >
+                                    <li class="red">Navegação em menus pode ser melhorada</li>
+                                    <li class="red">Descrições de serviços repetitivas</li>
+                                    <li class="red">Falta de depoimentos e CTA claro para agendamento</li>
+                                </ul>
+                            </div>
+                            <div class="analysis-section">
+                                <h4><i class="fas fa-eye"></i> Observações</h4>
+                                <p>Posicionamento como centro de desenvolvimento humano com foco multidisciplinar. Tom de voz acolhedor e profissional.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Clínica Pé no Chão -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <h3>Clínica Pé no Chão</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="competitor-analysis">
+                            <div class="analysis-section">
+                                <h4><i class="fas fa-thumbs-up"></i> Pontos Fortes</h4>
+                                <ul>
+                                    <li c>Design moderno e atraente</li>
+                                    <li>Apresentação clara de serviços e equipe multidisciplinar</li>
+                                    <li>Seção de depoimentos de clientes</li>
+                                    <li>Informações de contato visíveis</li>
+                                </ul>
+                            </div>
+                            <div class="analysis-section">
+                                <h4><i class="fas fa-thumbs-down red "></i> Pontos Fracos</h4>
+                                <ul > 
+                                    <div class="red">
+
+                                        <li class="red">Navegação pode ser mais fluida</li>
+                                        <li class="red">Seções muito textuais</li>
+                                        <li class="red">Falta de blog ou artigos para aprofundar engajamento</li>
+                                    </div>
+                                    </ul>
+                            </div>
+                            <div class="analysis-section">
+                                <h4><i class="fas fa-eye"></i> Observações</h4>
+                                <p>Foco em desenvolvimento infanto-juvenil. Tom de voz acolhedor e transparente. Design agradável, mas com densidade de texto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Carolina Faria Psicóloga -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <h3>Carolina Faria Psicóloga</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="competitor-analysis">
+                            <div class="analysis-section">
+                                <h4><i class="fas fa-thumbs-up"></i> Pontos Fortes</h4>
+                                <ul>
+                                    <li>Apresentação pessoal e acolhedora da psicóloga</li>
+                                    <li>Foco claro na psicologia infantil e autismo (ABA e Modelo Denver)</li>
+                                    <li>Informações de contato visíveis</li>
+                                </ul>
+                            </div>
+                            <div class="analysis-section">
+                                <h4><i class="fas fa-thumbs-down red"></i> Pontos Fracos</h4>
+                                <ul >
+                                    <li class="red">Design mais simples</li>
+                                    <li class="red">Falta de depoimentos ou estudos de caso</li>
+                                    <li class="red">Conteúdo denso sem muitos recursos visuais</li>
+                                    <li class="red">Ausência de blog</li>
+                                </ul>
+                            </div>
+                            <div class="analysis-section">
+                                <h4><i class="fas fa-eye"></i> Observações</h4>
+                                <p>Posicionamento como psicóloga clínica individual, com abordagem pessoal e foco em atendimento personalizado.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4: Clínica Origami -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <h3>Clínica Origami</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="competitor-analysis">
+                            <div class="analysis-section">
+                                <h4><i class="fas fa-thumbs-up"></i> Pontos Fortes</h4>
+                                <ul>
+                                    <li>Design moderno e profissional</li>
+                                    <li>Explicação clara da metodologia (ABA, Ensino Naturalístico) e serviços</li>
+                                    <li>Apresentação da equipe multidisciplinar</li>
+                                    <li>Seção "Nossos Diferenciais" com dados de credibilidade</li>
+                                    <li>Blog com artigos</li>
+                                </ul>
+                            </div>
+                            <div class="analysis-section">
+                                <h4><i class="fas fa-thumbs-down red"></i> Pontos Fracos</h4>
+                                <ul >
+                                    <li class="red">Quantidade de informações pode ser densa</li>
+                                    <li class="red">Falta de depoimentos em destaque na página inicial</li>
+                                </ul>
+                            </div>
+                            <div class="analysis-section">
+                                <h4><i class="fas fa-eye"></i> Observações</h4>
+                                <p>Centro de desenvolvimento e comportamento infantil especializado em ABA. Tom de voz profissional, informativo e focado em evidências.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5: Clínica Intervir - APAE-BH -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <h3>Clínica Intervir - APAE-BH</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="competitor-analysis">
+                            <div class="analysis-section">
+                                <h4><i class="fas fa-thumbs-up"></i> Pontos Fortes</h4>
+                                <ul>
+                                    <li>Instituição reconhecida (APAE-BH) com grande credibilidade</li>
+                                    <li>Foco em habilitação e reabilitação de pessoas com deficiência/autismo</li>
+                                    <li>Abordagem multidisciplinar</li>
+                                    <li>Informações detalhadas sobre serviços e metodologias</li>
+                                </ul>
+                            </div>
+                            <div class="analysis-section">
+                                <h4><i class="fas fa-thumbs-down red"></i> Pontos Fracos</h4>
+                                <ul >
+                                    <li class="red">Design mais institucional e menos "clean"</li>
+                                    <li class="red">Processo de atendimento mais burocrático</li>
+                                    <li class="red">Grande quantidade de texto</li>
+                                    <li class="red">Falta de CTA claro para agendamento direto</li>
+                                </ul>
+                            </div>
+                            <div class="analysis-section">
+                                <h4><i class="fas fa-eye"></i> Observações</h4>
+                                <p>Instituição de referência em reabilitação. Tom de voz institucional, informativo e técnico. Site rico em informações.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estratégia Meta Ads -->
+    <section id="estrategia" class="section">
+        <div class="container">
+            <h2 class="section-title">Estratégia Meta Ads + Funil de Vendas</h2>
+            <p class="section-subtitle">Estratégia focada em resultados com orçamento mensal de R$ 800,00</p>
+            
+            <div class="funnel-container">
+                <div class="funnel-stage">
+                    <div class="stage-header">
+                            <span class="budget">40% - R$ 320,00</span>
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Topo de Funil (Consciência)</h3>
+                    </div>
+                    <div class="stage-content">
+                        <p><strong>Objetivo:</strong> Aumentar o reconhecimento da marca @linkpsicologia e atrair um público amplo interessado em autismo e desenvolvimento infantil.</p>
+                        <div class="stage-details">
+                            <h4>Segmentação:</h4>
+                            <p>Pais, mães, cuidadores, educadores e profissionais da saúde interessados em autismo, desenvolvimento infantil, psicologia infantil em Belo Horizonte.</p>
+                            <h4>Formatos:</h4>
+                            <p>Vídeos educativos, infográficos com dicas, carrosséis inspiradores, Stories/Reels dinâmicos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="funnel-stage">
+                    <div class="stage-header">
+                            <span class="budget">35% - R$ 280,00</span>
+                            <i class="fas fa-users"></i>
+                            <h3>Meio de Funil (Consideração)</h3>
+                    </div>
+                    <div class="stage-content">
+                        <p><strong>Objetivo:</strong> Engajar o público que já demonstrou interesse, incentivando-os a buscar mais informações e considerar os serviços oferecidos.</p>
+                        <div class="stage-details">
+                            <h4>Segmentação:</h4>
+                            <p>Pessoas que interagiram com anúncios de topo de funil, visitaram o site, retargeting.</p>
+                            <h4>Formatos:</h4>
+                            <p>Vídeos explicativos sobre metodologias, e-books, guias, checklists para captura de leads.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="funnel-stage">
+                    <div class="stage-header">
+                            <span class="budget">25% - R$ 200,00</span>
+                            <i class="fas fa-dollar-sign"></i>
+                            <h3>Fundo de Funil (Conversão)</h3>
+                    </div>
+                    <div class="stage-content">
+                        <p><strong>Objetivo:</strong> Converter leads qualificados em pacientes e terapeutas. Chamada para ação direta para agendamento.</p>
+                        <div class="stage-details">
+                            <h4>Segmentação:</h4>
+                            <p>Leads capturados, visitantes de páginas de serviço/contato, públicos semelhantes.</p>
+                            <h4>Formatos:</h4>
+                            <p>CTA direto para agendamento, formulários instantâneos, anúncios de mensagem via WhatsApp.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projections">
+                <h3>Projeções Mensais</h3>
+                <div class="projection-grid">
+                    <div class="projection-item">
+                        <i class="fas fa-eye"></i>
+                        <span class="projection-number">20k - 40k</span>
+                        <span class="projection-label">Pessoas Alcançadas</span>
+                    </div>
+                    <div class="projection-item">
+                        <i class="fas fa-user-plus"></i>
+                        <span class="projection-number">9 - 56</span>
+                        <span class="projection-label">Leads Qualificados</span>
+                    </div>
+                    <div class="projection-item">
+                        <i class="fas fa-star"></i>
+                        <span class="projection-number">6 - 20</span>
+                        <span class="projection-label">Leads Alta Intenção</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proposta Comercial -->
+    <section id="proposta" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Proposta Comercial</h2>
+            <div class="proposal-card">
+                <div class="price-section">
+                    <span class="price-label">Valor Mensal</span>
+                    <span class="price">R$ 500,00</span>
+                </div>
+                
+                <div class="proposal-content">
+                    <div class="proposal-section">
+                        <h3><i class="fas fa-chart-line"></i> Entregáveis e Acompanhamento</h3>
+                        <ul>
+                            <li><strong>Relatórios Diários:</strong> Métricas das campanhas de Meta Ads, incluindo investimento, alcance, impressões, cliques e leads gerados.</li>
+                            <li><strong>Resumo Semanal Explicativo:</strong> Análises de desempenho, insights sobre o público e sugestões de otimização em linguagem clara.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="proposal-section">
+                        <h3><i class="fas fa-headset"></i> Suporte e Disponibilidade</h3>
+                        <ul>
+                            <li><strong>Reuniões Periódicas:</strong> Semanais ou quinzenais para discutir andamento das campanhas e alinhar estratégias.</li>
+                            <li><strong>Atendimento de Dúvidas:</strong> Suporte total para esclarecimentos a qualquer momento, garantindo tranquilidade durante todo o processo.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section id="diferenciais" class="section">
+        <div class="container">
+            <h2 class="section-title">Diferenciais do Serviço</h2>
+            <p class="section-subtitle">Nossa gestão de tráfego vai além da simples criação de campanhas</p>
+            
+            <div class="differentials-grid">
+                <div class="differential-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Relatórios Diários Detalhados</h3>
+                    <p>Mantenha-se atualizada com o desempenho das suas campanhas em tempo real, com relatórios claros e objetivos sobre cada métrica relevante.</p>
+                </div>
+                
+                <div class="differential-item">
+                    <i class="fas fa-calendar-week"></i>
+                    <h3>Acompanhamento Semanal Explicativo</h3>
+                    <p>Receba um resumo consolidado das ações e resultados da semana, com análises aprofundadas e insights estratégicos.</p>
+                </div>
+                
+                <div class="differential-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Suporte Total e Disponibilidade</h3>
+                    <p>Conte com atendimento de dúvidas e reuniões a qualquer momento, garantindo todo o apoio necessário para decisões estratégicas.</p>
+                </div>
+                
+                <div class="differential-item">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Otimização Contínua</h3>
+                    <p>Campanhas constantemente monitoradas e otimizadas para garantir o melhor retorno sobre o investimento.</p>
+                </div>
+                
+                <div class="differential-item">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Foco no Seu Crescimento</h3>
+                    <p>Nosso objetivo é impulsionar o aumento de pacientes e terapeutas para a @linkpsicologia, contribuindo para o crescimento sustentável.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SEÇÃO DE GRÁFICO DE PROJEÇÃO
+         ======================================== -->
+    
+    <section id="grafico-projecao" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Projeção de Resultados</h2>
+            <p class="section-subtitle">Visualize o potencial de crescimento com a nossa estratégia de tráfego pago.</p>
+            <div class="chart-container">
+                <canvas id="projectionChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ========================================
+         SEÇÃO DE ROI E MÉTRICAS DE PERFORMANCE
+         ======================================== -->
+    
+    <section id="roi-metricas" class="section">
+        <div class="container">
+            <h2 class="section-title">ROI e Métricas de Performance</h2>
+            <p class="section-subtitle">Acompanhe o retorno sobre investimento e principais indicadores de sucesso da campanha.</p>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>ROI Esperado</h3>
+                        <div class="metric-value">300%</div>
+                        <p>Retorno sobre investimento projetado nos primeiros 6 meses</p>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>Taxa de Conversão</h3>
+                        <div class="metric-value">8-12%</div>
+                        <p>Conversão de leads em pacientes efetivos</p>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>Custo por Lead</h3>
+                        <div class="metric-value">R$ 15-25</div>
+                        <p>Investimento médio para aquisição de cada lead qualificado</p>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>Tempo de Retorno</h3>
+                        <div class="metric-value">2-3 meses</div>
+                        <p>Período estimado para recuperação do investimento inicial</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========================================
+         SEÇÃO DE CRONOGRAMA DE IMPLEMENTAÇÃO
+         ======================================== -->
+    
+    <section id="cronograma" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Cronograma de Implementação</h2>
+            <p class="section-subtitle">Planejamento detalhado das etapas de implementação da estratégia de tráfego pago.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Semana 1-2: Setup Inicial</h3>
+                        <ul>
+                            <li>Configuração das contas Meta Ads</li>
+                            <li>Instalação do Pixel do Facebook</li>
+                            <li>Criação de públicos-alvo</li>
+                            <li>Desenvolvimento dos primeiros criativos</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Semana 3-4: Lançamento das Campanhas</h3>
+                        <ul>
+                            <li>Ativação das campanhas de topo de funil</li>
+                            <li>Monitoramento inicial de performance</li>
+                            <li>Ajustes de segmentação e orçamento</li>
+                            <li>Criação de landing pages otimizadas</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Mês 2: Otimização e Expansão</h3>
+                        <ul>
+                            <li>Análise de dados e otimizações</li>
+                            <li>Lançamento de campanhas de meio de funil</li>
+                            <li>Testes A/B de criativos e textos</li>
+                            <li>Implementação de retargeting</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Mês 3+: Escala e Conversão</h3>
+                        <ul>
+                            <li>Ativação de campanhas de conversão</li>
+                            <li>Escalonamento de orçamentos</li>
+                            <li>Automação de processos</li>
+                            <li>Relatórios de ROI e performance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SEÇÃO DE CONTATO
+         ======================================== -->
+    
+    <!-- Seção de Contato - Informações para comunicação e call-to-action -->
+    <section id="contato" class="section bg-gradient">
+        <div class="container">
+            <h2 class="section-title white">Vamos Conversar!</h2>
+            <p class="section-subtitle white">Estamos à disposição para construir juntos o futuro da @linkpsicologia!</p>
+            
+            <!-- Informações de contato - E-mail e WhatsApp com links clicáveis -->
+            <div class="contact-info">
+                <!-- Item de contato E-mail - Ícone e link clicável -->
+                <div class="contact-item">
+                    <a href="mailto:analuizacunhagt@gmail.com" title="Enviar e-mail">
+                        <i class="fas fa-envelope"></i> <!-- Ícone de envelope para e-mail -->
+                    </a>
+                    <div>
+                        <h3>E-mail</h3>
+                        <a href="mailto:analuizacunhagt@gmail.com">analuizacunhagt@gmail.com</a>
+                    </div>
+                </div>
+                
+                <!-- Item de contato WhatsApp - Ícone e link clicável -->
+                <div class="contact-item">
+                    <a href="https://wa.me/5531999347385?text=Olá! Gostaria de saber mais sobre a proposta da @linkpsicologia" 
+                       target="_blank" 
+                       title="Falar no WhatsApp">
+                        <i class="fab fa-whatsapp"></i> <!-- Ícone do WhatsApp -->
+                    </a>
+                    <div>
+                        <h3>WhatsApp</h3>
+                        <a href="https://wa.me/5531999347385?text=Olá! Gostaria de saber mais sobre a proposta da @linkpsicologia" 
+                           target="_blank" 
+                           title="Falar no WhatsApp">(31) 99934-7385</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Seção de call-to-action - Botão principal para contato -->
+            <div class="cta-section">
+                <a href="https://wa.me/5531999347385?text=Olá! Gostaria de saber mais sobre a proposta da @linkpsicologia" 
+                   target="_blank" 
+                   title="Falar no WhatsApp" class="cta-button">
+                    <i class="fas fa-paper-plane"></i> <!-- Ícone de avião de papel -->
+                    Entrar em Contato
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER
+         ======================================== -->
+    
+    <!-- Footer - Rodapé com informações de copyright -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 @linkpsicologia - Proposta Interativa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ========================================
+         BOTÃO FLUTUANTE DO WHATSAPP
+         ======================================== -->
+    
+    <!-- Botão flutuante do WhatsApp - Fixo no canto inferior direito para acesso rápido -->
+    <a href="https://wa.me/5531999347385?text=Olá! Gostaria de saber mais sobre a proposta da @linkpsicologia" 
+       class="whatsapp-float" 
+       target="_blank" 
+       title="Falar no WhatsApp">
+        <i class="fab fa-whatsapp"></i> <!-- Ícone do WhatsApp -->
+    </a>
+
+</body>
+</html>
+

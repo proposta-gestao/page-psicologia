@@ -1,0 +1,1288 @@
+/* ========================================
+   RESET E CONFIGURAÇÕES BÁSICAS
+   ======================================== */
+
+/* Reset básico para remover margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura total */
+}
+
+/* Configuração do scroll suave para toda a página */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Previne scroll horizontal na raiz */
+}
+
+/* Configurações básicas do body */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden; /* Evita scroll horizontal */
+    width: 100%; /* Garante que o body ocupe 100% da largura */
+    max-width: 100vw; /* Limita a largura máxima à viewport */
+}
+
+/* Container padrão para centralizar conteúdo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%; /* Garante que o container ocupe toda a largura disponível */
+}
+
+/* ========================================
+   HEADER E NAVEGAÇÃO
+   ======================================== */
+
+/* Header fixo no topo da página */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Container da navegação */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+/* Logo da @linkpsicologia - Agora como link clicável */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2563eb;
+    text-decoration: none; /* Remove sublinhado do link */
+    transition: color 0.3s ease, transform 0.3s ease; /* Adiciona transições suaves */
+}
+
+.nav-logo:hover {
+    color: #1d4ed8; /* Cor mais escura no hover */
+    transform: scale(1.05); /* Leve aumento no hover */
+}
+
+.nav-logo i {
+    margin-right: 0.5rem;
+    font-size: 1.8rem;
+    transition: transform 0.3s ease; /* Transição para o ícone */
+}
+
+.nav-logo:hover i {
+    transform: rotate(10deg); /* Rotação leve do ícone no hover */
+}
+
+/* Menu de navegação principal */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.fa-eye{
+    color:#10b981!important;
+}
+
+/* Links de navegação */
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #2563eb;
+}
+
+/* Efeito de linha animada nos links */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #2563eb;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Botão hambúrguer para menu mobile */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* ========================================
+   SEÇÃO HERO (BANNER PRINCIPAL)
+   ======================================== */
+
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 120px 0 80px;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease 0.2s both;
+}
+
+/* Estatísticas em destaque */
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    animation: fadeInUp 1s ease 0.4s both;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* ========================================
+   SEÇÕES GERAIS
+   ======================================== */
+
+.section {
+    padding: 80px 0;
+}
+
+/* Fundo claro para seções alternadas */
+.bg-light {
+    background: #f8fafc;
+}
+
+/* Fundo com gradiente */
+.bg-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+/* Títulos das seções */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1e293b;
+}
+
+.section-title.white {
+    color: white;
+}
+
+/* Subtítulos das seções */
+.section-subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #64748b;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-subtitle.white {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ========================================
+   CARDS DE CONTEÚDO
+   ======================================== */
+
+.content-card {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+/* Grid para organizar cards em colunas */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Itens individuais dos cards */
+.content-item {
+    text-align: center;
+    padding: 2rem;
+}
+
+.content-item .icon {
+    font-size: 3rem;
+    color: #2563eb;
+    margin-bottom: 1rem;
+}
+
+.content-item h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1e293b;
+}
+
+.content-item p {
+    color: #64748b;
+    line-height: 1.7;
+}
+
+/* ========================================
+   ACCORDION (MENU SANFONADO)
+   ======================================== */
+
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Item individual do accordion */
+.accordion-item {
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.accordion-item:hover {
+    transform: translateY(-2px);
+}
+
+/* Cabeçalho clicável do accordion */
+.accordion-header {
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.accordion-header:hover {
+    background: linear-gradient(135deg, #1d4ed8, #2563eb);
+}
+
+.accordion-header h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Ícone de seta do accordion */
+.accordion-icon {
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+/* Conteúdo expansível do accordion */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 1000px;
+}
+
+/* Análise dos concorrentes */
+.competitor-analysis {
+    padding: 2rem;
+}
+
+.analysis-section {
+    margin-bottom: 1.5rem;
+}
+
+.analysis-section h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+}
+
+.analysis-section h4 i {
+    color: #2563eb;
+}
+
+.analysis-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+}
+
+.analysis-section li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.analysis-section li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #2563eb;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.analysis-section .red::before  {
+    
+    color: #f70000;
+    
+}
+
+.analysis-section p {
+    color: #64748b;
+    line-height: 1.7;
+}
+
+/* ========================================
+   FUNIL DE VENDAS
+   ======================================== */
+
+.funnel-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas lado a lado */
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Estágios do funil */
+.funnel-stage {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.funnel-stage:hover {
+    transform: translateY(-5px);
+}
+
+/* Cabeçalho dos estágios */
+.stage-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.stage-header i {
+    font-size: 2rem;
+    color: #2563eb;
+}
+
+.stage-header h3 {
+    flex: 1;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+/* Badge do orçamento */
+.budget {
+    background: #2563eb;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.stage-content p {
+    margin-bottom: 1rem;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.stage-details h4 {
+    font-weight: 600;
+    color: #1e293b;
+    margin: 1rem 0 0.5rem;
+}
+
+/* ========================================
+   PROJEÇÕES
+   ======================================== */
+
+.projections {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.projections h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #1e293b;
+}
+
+.projection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.projection-item {
+    text-align: center;
+}
+
+.projection-item i {
+    font-size: 2.5rem;
+    color: #2563eb;
+    margin-bottom: 1rem;
+}
+
+.projection-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.projection-label {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   PROPOSTA COMERCIAL
+   ======================================== */
+
+.proposal-card {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Seção do preço */
+.price-section {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    border-radius: 15px;
+    color: white;
+}
+
+.price-label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/* Seções da proposta */
+.proposal-section {
+    margin-bottom: 2rem;
+}
+
+.proposal-section h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1e293b;
+}
+
+.proposal-section h3 i {
+    color: #2563eb;
+}
+
+/* Listas da proposta */
+.proposal-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.proposal-section li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+/* Ícone de check nas listas */
+.proposal-section li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: bold;
+}
+
+/* ========================================
+   DIFERENCIAIS
+   ======================================== */
+
+.differentials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.differential-item {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.differential-item:hover {
+    transform: translateY(-5px);
+}
+
+.differential-item i {
+    font-size: 3rem;
+    color: #2563eb;
+    margin-bottom: 1rem;
+}
+
+.differential-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1e293b;
+}
+
+.differential-item p {
+    color: #64748b;
+    line-height: 1.7;
+}
+
+/* ========================================
+   SEÇÃO DE CONTATO
+   ======================================== */
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+
+
+
+/* Estilos para ícones clicáveis de contato */
+.contact-item a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.contact-item a:hover {
+    opacity: 0.8;
+    transform: scale(1.1); /* Efeito de aumento no hover */
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover i {
+    color: white; /* Ícone fica mais branco no hover */
+}
+
+.contact-item h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.contact-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: opacity 0.3s ease;
+}
+
+.contact-item a:hover {
+    opacity: 0.8;
+}
+
+/* Botão de call-to-action */
+.cta-section {
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    color: #2563eb;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   BOTÃO FLUTUANTE DO WHATSAPP
+   ======================================== */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #25d366; /* Cor oficial do WhatsApp */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+/* Animação de pulso para chamar atenção */
+.whatsapp-float::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background: #25d366;
+    animation: pulse 2s infinite;
+    z-index: -1;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    70% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer {
+    background: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* ========================================
+   ANIMAÇÕES
+   ======================================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.6s ease;
+}
+
+/* ========================================
+   RESPONSIVIDADE - MOBILE
+   ======================================== */
+
+@media (max-width: 768px) {
+    /* Garantir que não haja overflow horizontal */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+    }
+    
+    /* Container com padding reduzido em mobile */
+    .container {
+        padding: 0 15px; /* Reduz padding lateral em mobile */
+        max-width: 100%;
+    }
+
+    /* Menu mobile */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+        z-index: 999; /* Garante que o menu fique acima de outros elementos */
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    /* Animação do botão hambúrguer */
+    .nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .nav-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Cards do funil empilhados em mobile */
+    .funnel-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem; /* Reduz gap em mobile */
+    }
+
+    /* Ajustes para mobile */
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.2; /* Melhora legibilidade */
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center; /* Centraliza itens em mobile */
+    }
+
+    .contact-item {
+        justify-content: center;
+        text-align: center; /* Centraliza texto */
+    }
+
+    .nav-container {
+        padding: 1rem 15px; /* Reduz padding do nav container */
+    }
+
+    .content-card {
+        padding: 2rem 1.5rem; /* Reduz padding interno dos cards */
+        margin: 0 auto; /* Centraliza cards */
+    }
+
+    .proposal-card {
+        padding: 2rem 1.5rem;
+        margin: 0 auto;
+    }
+
+    .price-section {
+        padding: 1.5rem;
+    }
+
+    .price {
+        font-size: 2.5rem;
+    }
+
+    /* Botão WhatsApp ajustado para mobile */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+        z-index: 1001; /* Garante que fique acima do menu mobile */
+    }
+
+    .whatsapp-float i {
+        font-size: 1.5rem;
+    }
+
+    /* Seções com padding reduzido em mobile */
+    .section {
+        padding: 60px 0;
+    }
+
+    /* Accordion responsivo */
+    .accordion {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .accordion-header {
+        padding: 1rem 1.5rem;
+        font-size: 1rem; /* Reduz tamanho da fonte em mobile */
+    }
+
+    .competitor-analysis {
+        padding: 1.5rem;
+    }
+
+    /* Funil stages responsivos */
+    .funnel-stage {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .differential-item {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Hero stats responsivo */
+    .stat-number {
+        font-size: 2rem; /* Reduz tamanho dos números */
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    /* Cards do funil em 2 colunas para tablet */
+    .funnel-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .content-card {
+        padding: 1.5rem;
+    }
+
+    .accordion-header {
+        padding: 1rem 1.5rem;
+    }
+
+    .competitor-analysis {
+        padding: 1.5rem;
+    }
+
+    .funnel-stage {
+        padding: 1.5rem;
+    }
+
+    .proposal-card {
+        padding: 1.5rem;
+    }
+
+    .differential-item {
+        padding: 1.5rem;
+    }
+}
+
+
+
+/* ========================================
+   MELHORIAS ESPECÍFICAS PARA FUNIL DE VENDAS
+   ======================================== */
+
+.funnel-stage {
+    position: relative; /* Necessário para posicionamento absoluto do budget */
+    overflow: hidden; /* Garante que o badge não "escape" do card */
+}
+
+.funnel-stage .budget {
+    position: absolute;
+    top: 15px; /* Distância do topo */
+    left: 15px; /* Distância da esquerda */
+    padding: 0.4rem 0.8rem; /* Ajuste de padding para o badge */
+    font-size: 0.85rem; /* Ajuste de fonte */
+    z-index: 1; /* Garante que o badge fique acima do conteúdo */
+    border-radius: 10px; /* Borda mais suave */
+}
+
+.funnel-stage .stage-header {
+    justify-content: center; /* Centraliza o ícone e título */
+    margin-top: 2rem; /* Espaço para o badge */
+}
+
+.funnel-stage .stage-header i {
+    font-size: 2.5rem; /* Aumenta o tamanho do ícone */
+}
+
+.funnel-stage .stage-header h3 {
+    font-size: 1.5rem; /* Aumenta o tamanho do título */
+}
+
+/* Responsividade para cards de funil na vertical em mobile */
+@media (max-width: 768px) {
+    .funnel-container {
+        grid-template-columns: 1fr; /* Cards em coluna única */
+    }
+
+    .funnel-stage .budget {
+        top: 10px;
+        left: 10px;
+        font-size: 0.8rem;
+    }
+
+    .funnel-stage .stage-header {
+        margin-top: 1.5rem;
+    }
+}
+
+
+
+
+/* ========================================
+   SEÇÃO DE GRÁFICO DE PROJEÇÃO
+   ======================================== */
+
+.chart-container {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 2rem auto;
+    position: relative;
+}
+
+/* Responsividade para o gráfico */
+@media (max-width: 768px) {
+    .chart-container {
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+}
+
+
+
+/* ========================================
+   SEÇÃO DE ROI E MÉTRICAS DE PERFORMANCE
+   ======================================== */
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.metric-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    border-color: #2563eb;
+}
+
+.metric-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.metric-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.metric-content h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.metric-content p {
+    color: #64748b;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Responsividade para métricas */
+@media (max-width: 768px) {
+    .metrics-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .metric-card {
+        padding: 1.5rem;
+    }
+    
+    .metric-value {
+        font-size: 2rem;
+    }
+}
+
+
+/* ========================================
+   SEÇÃO DE CRONOGRAMA DE IMPLEMENTAÇÃO
+   ======================================== */
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #2563eb, #3b82f6);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 80px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+    z-index: 1;
+}
+
+.timeline-marker i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.timeline-content {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #2563eb;
+}
+
+.timeline-content h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.timeline-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline-content li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.timeline-content li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #2563eb;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Responsividade para timeline */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        padding-left: 60px;
+    }
+    
+    .timeline-marker {
+        width: 40px;
+        height: 40px;
+        left: 0;
+    }
+    
+    .timeline-marker i {
+        font-size: 1.2rem;
+    }
+    
+    .timeline-content {
+        padding: 1.5rem;
+    }
+}
+
